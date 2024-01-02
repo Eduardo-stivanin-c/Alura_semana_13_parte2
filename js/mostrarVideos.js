@@ -1,7 +1,7 @@
 //mostrarvideos
 "use strick"
 import { conexaoAPI } from "./conexaoAPI.js";
-const lista=document.querySelector('[data-lista]')
+const lista=document.querySelector('[data-lista]');
 
 
 function constroiCard(titulo,descricao,url,imagem) {
@@ -23,7 +23,8 @@ return video;
 async function listaVideo() {
     const listaApi= await conexaoAPI.listaVideos();
 // piuxa oa lista em loop
-    listaApi.forEach(elemento => listaApi.appendChild(constroiCard(
+    listaApi.forEach(elemento => listaApi.appendChild(
+        constroiCard(
         elemento.titulo,
         elemento.descricao,
         elemento.url,
@@ -33,4 +34,4 @@ async function listaVideo() {
 }
 
 
-listaVideo()
+listaVideo();
