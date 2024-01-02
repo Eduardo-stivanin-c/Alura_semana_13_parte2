@@ -18,10 +18,6 @@
 ![Screenshot da tela inicial do AluraPlay](https://imgur.com/aymxEsh.png)
 ![Screenshot da tela do formulário do AluraPlay](https://imgur.com/ShNADf2.png)
 
-
-
-
-
 eduardo editou
 # Dependencias do projeto
 Node JS 18.7
@@ -39,14 +35,17 @@ nvm use v18.7.0
 npm install json-server -g
 npm init
 ```
-
 no Windows 
-PowerShell (executar como administrador)
+### PowerShell (executar como administrador)
+`````
+# configura o Windows por Json server rodar no Node JS(digita A para todos)
+Set-ExecutionPolicy RemoteSigned
 `````
 
-`````
+### executar o Json Server pra rodar onosso Projeto
+``````
+json-server  --watch db.json
+``````
+
 ## Referências 
 [alura.com.br](https://cursos.alura.com.br/course/javascript-criando-requisicoes/task/142287)
- 
-
-
