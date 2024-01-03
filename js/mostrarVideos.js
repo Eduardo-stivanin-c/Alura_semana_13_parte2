@@ -1,6 +1,6 @@
 //mostrarvideos
 "use strick"
-import { conexaoAPI } from "./conexaoAPI.js";
+import { conectaApi } from "./conexaoAPI.js";
 const lista=document.querySelector('[data-lista]');
 
 
@@ -20,10 +20,10 @@ function constroiCard(titulo,descricao,url,imagem) {
 return video;
 }
 
-async function listaVideo() {
-    const listaApi= await conexaoAPI.listaVideos();
-// piuxa oa lista em loop
-    listaApi.forEach(elemento => listaApi.appendChild(
+async function listaVideos() {
+    const listaApi= await conectaApi.listaVideos();
+// puxa oa lista em loop
+    listaApi.forEach(elemento => lista.appendChild(
         constroiCard(
         elemento.titulo,
         elemento.descricao,
@@ -34,4 +34,4 @@ async function listaVideo() {
 }
 
 
-listaVideo();
+listaVideos();
