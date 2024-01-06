@@ -17,7 +17,7 @@ function constroiCard(titulo,descricao,url,imagem) {
     <img src="${imagem}" alt="logo canal alura">
     <h3>${titulo}</h3>
     <p>${descricao}</p>
-</div>`
+</div>`;
 
 return video;
 }
@@ -26,10 +26,10 @@ async function listaVideos() {
     const listaApi= await conectaApi.listaVideos();
 // puxa oa lista em loop
     listaApi.forEach(elemento => lista.appendChild(
-        constroiCard(       elemento.titulo,        elemento.descricao,   
+        constroiCard(elemento.titulo,elemento.descricao,   
     elemento.url,        elemento.imagem))
         
-    )
+    );
 }
 
 
