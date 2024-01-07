@@ -24,7 +24,61 @@ async function criaVideo(titulo, descricao, url, imagem) {
     return conexaoConvertida;
 }
 
+
+
+
+async function buscaVideo(termoDeBusca) {
+        //pesquisa no servidor Json
+
+ const conexao = await fetch(`http://localhost:3000/videos/?q=${termoDeBusca}`);
+
+ //converte em  uma tablea de  Json
+ //const conexaoConvertida=await conexao.json();
+ return conexao.json();
+
+
+
+
+
+
+
+
+
+}/*async function buscaVideo(url) {
+    const response = await fetch("http://localhost:3000?/videos/q="+url);
+  
+    return response.json();
+  }*/
+
+
+
+
 export const conectaApi = {
     listaVideos,
-    criaVideo
+    criaVideo,
+buscaVideo
+//exportando funções
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+referncias 
+github.com/skidding/react-mock/get.js
+
+*/
+

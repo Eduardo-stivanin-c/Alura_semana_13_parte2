@@ -1,1 +1,8 @@
 gambiarra
+
+
+
+
+
+//pesquisa por palavra chave
+http://localhost:3000/videos?q=
