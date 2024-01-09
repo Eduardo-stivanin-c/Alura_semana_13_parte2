@@ -12,7 +12,7 @@ async function criarVideo(evento) {
 try {
     
     await conectaApi.criaVideo(titulo, descricao, url, imagem);
-    window.location.href = "../pages/envio-concluido.html";
+  //  window.location.href = "../pages/envio-concluido.html";
 } catch (e) {
     //laerta de erro no meu do Javascript
     alert(e);

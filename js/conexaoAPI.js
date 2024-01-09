@@ -1,13 +1,14 @@
 async function listaVideos() {
     //const conexao = await fetch("http://localhost:3000/videos");
     //erre ide prorposito psó pratestar tramneto de erros
-    const conexao = await fetch("http://localhost:3000/video");
+    const conexao = await fetch("http://localhost:3000/videos");
     const conexaoConvertida = await conexao.json();
 
     return conexaoConvertida;
 }
 
 async function criaVideo(titulo, descricao, url, imagem) {
+    //erre ide prorposito psó pratestar tramneto de erros
     const conexao = await fetch("http://localhost:3000/videos", {
         method: "POST",
         headers: {
@@ -24,7 +25,7 @@ async function criaVideo(titulo, descricao, url, imagem) {
     //if da inserça~ode vidoes
     //se conexão não ok ,! = não not
     if (!conexao.ok) {
-      throw new Error("Não foi possivel encvar o vídeo")  
+      throw new Error("Não foi possivel enviar o vídeo")  
     } /*else {
         
     }*/

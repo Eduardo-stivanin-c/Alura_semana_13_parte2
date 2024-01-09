@@ -19,7 +19,7 @@ async function buscarVideo(evento) {
 const lista=document.querySelector("[data-lista]")
 
 
-//limpando a tela de items antes do pesuiaod
+//limpando a tela de items antes do pesquisado
 while (lista.firstChild) {
     lista.removeChild(lista.firstChild);
 }
@@ -31,6 +31,13 @@ busca.forEach(elemento => lista.appendChild(
 //reuso de código 
     constroiCard(elemento.titulo,elemento.descricao,elemento.url,elemento.imagem)
 ) );
+
+
+//erro na barra de busca
+if (busca.length==0) {
+    //gerando titulo 2 pra mensagem de erro
+    lista.innerHTML=`<h2 class="mensagem_titulo">Não existem videos com esse termo </h2>`
+}
 
 }
 
